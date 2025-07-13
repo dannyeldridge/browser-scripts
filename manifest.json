@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Web Page Modifier",
+  "version": "1.0",
+  "description": "Modify web pages with custom actions",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Web Page Modifier"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

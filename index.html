@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 250px;
+      padding: 10px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .section {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    h3 {
+      margin: 5px 0 10px 0;
+      font-size: 16px;
+      color: #333;
+    }
+    button {
+      width: 100%;
+      padding: 10px 15px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:last-child {
+      margin-bottom: 0;
+    }
+    button:hover {
+      background-color: #357ae8;
+    }
+    button:active {
+      background-color: #2a56c6;
+    }
+    button.dazn {
+      background-color: #f77b00;
+    }
+    button.dazn:hover {
+      background-color: #e56a00;
+    }
+    button.dazn:active {
+      background-color: #d35f00;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h3>DAZN</h3>
+    <button class="dazn" data-action="hideDaznSidebar">Hide side bar</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
