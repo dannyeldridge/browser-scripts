@@ -5,6 +5,33 @@ const actions = {
     if (sidebar) {
       sidebar.remove();
     }
+  },
+  hideSkinSidebarPlugin: function() {
+    // Try multiple selector approaches
+    const selectors = [
+      '[class*="skin-sidebar-plugin"]',
+      '[id*="skin-sidebar-plugin"]',
+      '.skin-sidebar-plugin',
+      '#skin-sidebar-plugin'
+    ];
+    
+    let found = false;
+    selectors.forEach(selector => {
+      const elements = document.querySelectorAll(selector);
+      console.log(`Found ${elements.length} elements with selector: ${selector}`);
+      elements.forEach(element => {
+        console.log('Removing element:', element);
+        element.remove();
+        found = true;
+      });
+    });
+    
+    if (!found) {
+      console.log('No elements found with skin-sidebar-plugin in class or id');
+      // Let's also log all elements to help debug
+      const allElements = document.querySelectorAll('*');
+      console.log('Total elements on page:', allElements.length);
+    }
   }
   // Add more actions here as needed
 };
