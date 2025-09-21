@@ -32,6 +32,12 @@ const actions = {
       const allElements = document.querySelectorAll('*');
       console.log('Total elements on page:', allElements.length);
     }
+  },
+  hidePeacockPlaybackOverlay: function() {
+    const overlay = document.querySelector('.playback-overlay__container');
+    if (overlay) {
+      overlay.remove();
+    }
   }
   // Add more actions here as needed
 };
